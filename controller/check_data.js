@@ -10,9 +10,12 @@ module.exports = function(data) {
         }
         readdata = JSON.parse(readdata);
         if (data.pass == readdata.pass) {
-            console.log("Show Data");
+            console.log("Your Name: " + readdata.name);
+            console.log("Your Email: " + readdata.email);
+            console.log("Your Phone: " + readdata.phone);
+            console.log("Your Addresse: " + readdata.address);
         } else {
-            console.log("Sho Error");
+            console.log("Wrong Password");
         }
     })
 }

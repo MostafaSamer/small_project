@@ -22,6 +22,7 @@ module.exports = function(app) {
 
     app.post('/log_show', urlencodedParser, function(req, res) {
         check_data(req.body);
+        res.redirect('/')
     })
 
 }
