@@ -7,15 +7,16 @@ module.exports = function(data) {
     fs.readFile(fileName, 'utf8', function(err, readdata) {
         if (err) {
             console.log("User Not Found");
-        }
-        readdata = JSON.parse(readdata);
-        if (data.pass == readdata.pass) {
-            console.log("Your Name: " + readdata.name);
-            console.log("Your Email: " + readdata.email);
-            console.log("Your Phone: " + readdata.phone);
-            console.log("Your Addresse: " + readdata.address);
         } else {
-            console.log("Wrong Password");
+            readdata = JSON.parse(readdata);
+            if (data.pass == readdata.pass) {
+                console.log("Your Name: " + readdata.name);
+                console.log("Your Email: " + readdata.email);
+                console.log("Your Phone: " + readdata.phone);
+                console.log("Your Addresse: " + readdata.address);
+            } else {
+                console.log("Wrong Password");
+            }
         }
     })
 }
